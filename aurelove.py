@@ -51,12 +51,12 @@ df['subregion']=sub_region
 
 ####    TITLE
 st.set_page_config(layout="wide")  # this needs to be the first Streamlit command called
-st.title("punya aurel pokoknya")
-st.markdown("*uas prokom*")
+st.title("*DATA PRODUKSI MINYAK DUNIA*")
+st.markdown("*Aplikasi ini dibuat oleh Nadya Aurelya 12220142*")
 ####
 
 ### 1ST COLUMN
-st.subheader("Grafik")
+st.subheader("Grafik Produksi Minyak")
 masukan_n = st.selectbox("Pilih Negara", nama_negara)
 
 #Membuat plot untuk jumlah produksi negara tiap tahunnya
@@ -174,11 +174,24 @@ input_tahun = st.number_input("Pilih Tahun", min_value=1971, max_value=2015, val
 #menampilkan summary data berdasarkan input tahun user
 data_max = df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
 data_sorting = data_max.sort_values(["jumlah produksi"], ascending=[0])
-st.markdown(data_sorting.iloc[0])
+print(data_sorting['jumlah produksi'].iloc[0])
+print(data_sorting['nama negara'].iloc[0])
+print(data_sorting['kode negara'].iloc[0])
+print(data_sorting['region'].iloc[0])
+print(data_sorting['subregion'].iloc[0])
+st.markdown(data_sorting['jumlah produksi'].iloc[0])
+st.markdown(data_sorting['nama negara'].iloc[0])
+st.markdown(data_sorting['kode negara'].iloc[0])
+st.markdown(data_sorting['region'].iloc[0])
+st.markdown(data_sorting['subregion'].iloc[0])
 
 data_min= df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
 data_sorting = data_min.sort_values(["jumlah produksi"], ascending=[1])
-st.markdown(data_sorting.iloc[0])
+st.markdown(data_sorting['jumlah produksi'].iloc[0])
+st.markdown(data_sorting['nama negara'].iloc[0])
+st.markdown(data_sorting['kode negara'].iloc[0])
+st.markdown(data_sorting['region'].iloc[0])
+st.markdown(data_sorting['subregion'].iloc[0])
 
 data = datakosong.loc[datakosong['tahun produksi']==input_tahun]
 print(data)
