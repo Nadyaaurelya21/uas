@@ -51,8 +51,8 @@ df['subregion']=sub_region
 
 ####    TITLE
 st.set_page_config(layout="wide")  # this needs to be the first Streamlit command called
-st.title("Informasi Seputar Data Produksi Minyak Mentah dari Berbagai Negara di Seluruh Dunia")
-st.markdown("*Aplikasi ini dibuat oleh Radya Evandhika Novaldi/12220135/Teknik Perminyakan/Institut Teknologi Bandung*")
+st.title("punya aurel pokoknya")
+st.markdown("*uas prokom*")
 ####
 
 ### 1ST COLUMN
@@ -144,7 +144,7 @@ datakosong.head()
 ### 3RD COLUMN
 #mplot data kumulatif
 st.subheader("Grafik")
-Banyaknegara = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key=int1)
+Banyaknegara = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key="int1")
 dataplot = dfk.sort_values(["jumlah produksi"], ascending=[0])
 
 dataplot = dataplot[:Banyaknegara]
@@ -169,7 +169,7 @@ st.dataframe(dfk.loc[dfk['jumlah produksi']==0])
 ### 4TH COLUMN
 
 ### 5TH COLUMN
-input_tahun = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key=int2)
+input_tahun = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key="int2")
 
 #menampilkan summary data berdasarkan input tahun user
 data_max = df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
