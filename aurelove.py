@@ -178,6 +178,7 @@ st.markdown(df_summary_clean['region'].loc[87])
 st.markdown(df_summary_clean['subregion'].loc[87])
 print(dfk.loc[dfk['jumlah produksi']==0])
 st.write("\n")
+st.markdown("**Sama Dengan Nol:**")
 st.dataframe(dfk.loc[dfk['jumlah produksi']==0])
 ### 4TH COLUMN
 
@@ -208,6 +209,7 @@ st.markdown(data_sorting['kode negara'].iloc[0])
 st.markdown(data_sorting['region'].iloc[0])
 st.markdown(data_sorting['subregion'].iloc[0])
 st.write("\n")
+st.markdown("**Sama Dengan Nol:**")
 data = datakosong.loc[datakosong['tahun produksi']==input_tahun]
 print(data)
 st.dataframe(data)
