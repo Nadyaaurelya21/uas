@@ -77,7 +77,7 @@ st.pyplot(fig)
 ### 1ST COLUMN
 
 ### 2ND COLUMN
-st.subheader("Grafik")
+st.subheader("Grafik Negara Penghasil Minyak Terbesar")
 T = st.number_input("Pilih Tahun", min_value=1971, max_value=2015, value=1990)
 B1 = st.number_input("Pilih Banyaknya Negara", min_value=1, max_value=None, value=10)
 dftahun = df[df['tahun produksi'] == T].sort_values(by=['jumlah produksi'], ascending=False)
@@ -144,7 +144,7 @@ datakosong.head()
 
 ### 3RD COLUMN
 #mplot data kumulatif
-st.subheader("Grafik")
+st.subheader("Grafik Negara Penghasil Minyak Terbesar Kumulatif")
 Banyaknegara = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key="int1")
 dataplot = dfk.sort_values(["jumlah produksi"], ascending=[0])
 
