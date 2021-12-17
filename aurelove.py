@@ -49,6 +49,11 @@ df['tahun produksi']=tahun_produksi
 df['region']=region_negara
 df['subregion']=sub_region
 
+nama_kumulatif = []
+for i in df['nama negara']:
+    if i not in nama_kumulatif:
+        nama_kumulatif.append(i)
+        
 ####    TITLE
 st.set_page_config(layout="wide")  # this needs to be the first Streamlit command called
 st.title("*DATA PRODUKSI MINYAK DUNIA*")
@@ -89,10 +94,6 @@ st.pyplot(fig)
 ### 2ND COLUMN
 
 #membuat dataframe kumulatif
-nama_kumulatif = []
-for i in df['nama negara']:
-    if i not in nama_kumulatif:
-        nama_kumulatif.append(i)
 sum= 0
 produksi_kumulatif =[]
 for i in nama_kumulatif:
