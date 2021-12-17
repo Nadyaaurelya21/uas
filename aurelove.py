@@ -174,12 +174,10 @@ input_tahun = st.number_input("Banyak Negara", min_value=1, max_value=None, valu
 #menampilkan summary data berdasarkan input tahun user
 data_max = df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
 data_sorting = data_max.sort_values(["jumlah produksi"], ascending=[0])
-print(data_sorting.iloc[0])
 st.markdown(data_sorting.iloc[0])
 
 data_min= df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
 data_sorting = data_min.sort_values(["jumlah produksi"], ascending=[1])
-print(data_sorting.iloc[0])
 st.markdown(data_sorting.iloc[0])
 
 data = datakosong.loc[datakosong['tahun produksi']==input_tahun]
