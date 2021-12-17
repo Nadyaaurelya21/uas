@@ -57,7 +57,7 @@ st.markdown("*Aplikasi ini dibuat oleh Nadya Aurelya 12220142*")
 
 ### 1ST COLUMN
 st.subheader("Grafik Produksi Minyak")
-masukan_n = st.selectbox("Pilih Negara", nama_negara)
+masukan_n = st.selectbox("Pilih Negara", nama_kumulatif)
 
 #Membuat plot untuk jumlah produksi negara tiap tahunnya
 data_frame_1=df.loc[df["nama negara"] == masukan_n]
@@ -162,6 +162,11 @@ st.pyplot(fig)
 #Menampilkan summary data kumulatif
 print(df_summary_clean.loc[54])
 st.markdown(df_summary_clean.loc[54])
+st.markdown(df_summary_clean['jumlah produksi'].loc[54])
+st.markdown(df_summary_clean['nama negara'].loc[54])
+st.markdown(df_summary_clean['kode negara'].loc[54])
+st.markdown(df_summary_clean['region'].loc[54])
+st.markdown(df_summary_clean['subregion'].loc[54])
 print(df_summary_clean.loc[87])
 st.markdown(df_summary_clean.loc[87])
 print(dfk.loc[dfk['jumlah produksi']==0])
