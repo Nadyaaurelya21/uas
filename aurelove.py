@@ -144,7 +144,7 @@ datakosong.head()
 ### 3RD COLUMN
 #mplot data kumulatif
 st.subheader("Grafik")
-Banyaknegara = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key=int)
+Banyaknegara = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key=int1)
 dataplot = dfk.sort_values(["jumlah produksi"], ascending=[0])
 
 dataplot = dataplot[:Banyaknegara]
@@ -169,7 +169,7 @@ st.dataframe(dfk.loc[dfk['jumlah produksi']==0])
 ### 4TH COLUMN
 
 ### 5TH COLUMN
-input_tahun = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key=int)
+input_tahun = st.number_input("Banyak Negara", min_value=1, max_value=None, value=10, key=int2)
 
 #menampilkan summary data berdasarkan input tahun user
 data_max = df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
