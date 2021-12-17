@@ -169,7 +169,7 @@ st.dataframe(dfk.loc[dfk['jumlah produksi']==0])
 ### 4TH COLUMN
 
 ### 5TH COLUMN
-input_tahun = st.number_input("Pilih Tahun", min_value=1971, max_value=2015, value=1990, key="int3)
+input_tahun = st.number_input("Pilih Tahun", min_value=1971, max_value=2015, value=1990, key="int3")
 
 #menampilkan summary data berdasarkan input tahun user
 data_max = df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
