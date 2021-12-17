@@ -57,7 +57,7 @@ for i in df['nama negara']:
 ####    TITLE
 st.set_page_config(layout="wide")  # this needs to be the first Streamlit command called
 st.title("*DATA PRODUKSI MINYAK DUNIA*")
-st.markdown("*Aplikasi ini dibuat oleh Nadya Aurelya 12220142*")
+st.markdown("**Aplikasi ini dibuat oleh Nadya Aurelya 12220142**")
 ####
 
 ### 1ST COLUMN
@@ -162,20 +162,22 @@ st.pyplot(fig)
 ### 4TH COLUMN
 #Menampilkan summary data kumulatif
 print(df_summary_clean.loc[54])
-st.markdown("Terbesar:")
+st.markdown("**Terbesar:**")
 st.markdown(df_summary_clean['jumlah produksi'].loc[54])
 st.markdown(df_summary_clean['nama negara'].loc[54])
 st.markdown(df_summary_clean['kode negara'].loc[54])
 st.markdown(df_summary_clean['region'].loc[54])
 st.markdown(df_summary_clean['subregion'].loc[54])
 print(df_summary_clean.loc[87])
-st.markdown("Terkecil:")
+st.write("\n")
+st.markdown("**Terkecil:**")
 st.markdown(df_summary_clean['jumlah produksi'].loc[87])
 st.markdown(df_summary_clean['nama negara'].loc[87])
 st.markdown(df_summary_clean['kode negara'].loc[87])
 st.markdown(df_summary_clean['region'].loc[87])
 st.markdown(df_summary_clean['subregion'].loc[87])
 print(dfk.loc[dfk['jumlah produksi']==0])
+st.write("\n")
 st.dataframe(dfk.loc[dfk['jumlah produksi']==0])
 ### 4TH COLUMN
 
@@ -190,22 +192,22 @@ print(data_sorting['nama negara'].iloc[0])
 print(data_sorting['kode negara'].iloc[0])
 print(data_sorting['region'].iloc[0])
 print(data_sorting['subregion'].iloc[0])
-st.markdown("Terbesar:")
+st.markdown("**Terbesar**:")
 st.markdown(data_sorting['jumlah produksi'].iloc[0])
 st.markdown(data_sorting['nama negara'].iloc[0])
 st.markdown(data_sorting['kode negara'].iloc[0])
 st.markdown(data_sorting['region'].iloc[0])
 st.markdown(data_sorting['subregion'].iloc[0])
-
+st.write("\n")
 data_min= df_summary_clean1.loc[df_summary_clean1['tahun produksi']==input_tahun]
 data_sorting = data_min.sort_values(["jumlah produksi"], ascending=[1])
-st.markdown("Terkecil:")
+st.markdown("**Terkecil:**")
 st.markdown(data_sorting['jumlah produksi'].iloc[0])
 st.markdown(data_sorting['nama negara'].iloc[0])
 st.markdown(data_sorting['kode negara'].iloc[0])
 st.markdown(data_sorting['region'].iloc[0])
 st.markdown(data_sorting['subregion'].iloc[0])
-
+st.write("\n")
 data = datakosong.loc[datakosong['tahun produksi']==input_tahun]
 print(data)
 st.dataframe(data)
